@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            border: solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <form>
+                RESERVATION REQUEST
+            </form>
+        <tr>
+            <td>Arrival Date</td>
+            <td>
+                <label for="Date">
+                    <input type="date" value="date" required>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Nights</td>
+            <td>
+                <label for="Date">
+                    <input type="text" value="number">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Adults</td>
+            <td>
+                <label for="Number">
+                    <input type="number">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Children</td>
+            <td>
+                <label for="Number">
+                    <input type="Number">
+                </label>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table>
+        <tr>
+            <td>
+                Room type:
+            </td>
+            <td>
+                <input type="radio" checked name="Room Type"> Standard
+            </td>
+            <td>
+                <input type="radio" name="Room Type">Bussiness
+            </td>
+            <td>
+                <input type="radio" name="Room Type">Suite
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Bed Type:
+            </td>
+            <td>
+                <input type="radio" checked name="Bed Type">King
+            </td>
+            <td>
+                <input type="radio" name="Bed Type"> Double Double
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="Smoking">Smoking
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table>
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <label for="Name">
+                    <input type="text" required>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email
+            </td>
+            <td>
+                <label for="Email">
+                    <input type="email" required>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td>
+                <label for="Phone Number">
+                    <input type="tel" required>
+                </label>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <input type="submit" value="Enviar" />
+    <input type="reset" value="Borrar" />
+
+</body>
+
+</html>

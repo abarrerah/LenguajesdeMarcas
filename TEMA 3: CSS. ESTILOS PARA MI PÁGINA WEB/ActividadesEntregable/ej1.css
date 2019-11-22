@@ -1,0 +1,17 @@
+tr:nth-child(even) {background: green}
+tr:nth-child(odd) {background: red}
+td{
+    border-collapse: collapse;
+    border-bottom: solid black ;
+    border-bottom-width: 15%;
+}
+thead th{
+    background-color: black;
+    color: white;
+    
+}
+tr:hover{
+    background-color: yellow;
+    color: blueviolet;
+   
+}

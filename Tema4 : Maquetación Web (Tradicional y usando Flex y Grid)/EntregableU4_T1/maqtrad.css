@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+div header{
+    background-color: black  ;    
+    color:white;
+    font-weight: 500;
+    text-align: center;
+}
+
+div header p {
+    background-color: white;
+    color: black;
+    text-align: right;
+}
+
+.topbar{
+    background-color: black;
+}
+.topbar ul {
+    margin-block-start: 0%;
+    padding-inline-start: 0%;
+    padding-left: 2%;
+}
+
+.topbar ul li {
+    color:#ededf0 ;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-left:0.5%;
+    padding-right: 2%;
+    padding-top: 0.5rem;
+    position: sticky;
+    position:-webkit-sticky; 
+    z-index: 100;
+}
+
+.topbar ul li:hover {
+    background-color: lightgrey;
+    color:gray;
+}
+
+.section{
+    padding-top:0.23%; 
+}
+
+.leftbar{
+    float: left;
+}
+
+#news {
+    background-color: black;
+    color: white;
+    font-weight: lighter;
+    margin: 0%;
+    text-align: center;
+    width: 170%;
+}
+
+#grey{
+    background-color: gray;
+    color: black;
+    text-align: left;   
+}
+
+.leftbar nav ul  {
+    list-style: none;
+    margin: 0px;
+    padding-top:0.234rem;
+    padding-left: 0px;
+    width: 170%;
+}
+
+.grow{
+    padding-bottom: 80%;
+}
+
+.imagen{
+    background-color: gray;
+    float: left;
+    margin-left: 30%;
+    padding: 0.5%;
+    text-align: center;
+    width: 20%;
+}
+
+img{
+    width: 100%;
+}
+
+.private{
+    float: right;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    clear: both;
+    text-align: center;  
+    overflow: hidden;
+}
+
+.section{
+    margin-bottom: 27%;
+}
+
+.private h4{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+}

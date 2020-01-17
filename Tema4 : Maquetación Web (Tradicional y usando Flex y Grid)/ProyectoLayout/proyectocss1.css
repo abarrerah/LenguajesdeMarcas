@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    padding:0%;
+    margin:0%;
+}
+.container{
+    padding:0%;
+    margin:0%;
+}
+.topbar nav div{
+    display: inline-block;
+    vertical-align: text-top;
+}
+.firstpart{
+    padding-left: 3%;
+    padding-top: 12px;
+}
+div#logo{
+    width: 20%;
+    padding-right: 5%;
+}
+div#logo >img{
+    width:100%;
+    height: 40%;
+}
+.secondpart{
+    padding-left: 20%;
+    width: 30%;
+}
+.secondpart nav div{
+    border-left: solid #f5f5f5;
+    border-right: solid #f5f5f5;
+    border-width: thin;
+    font-family: FuturaPTBook-Reg, Arial, Helvetica, sans-serif;
+    display: block;
+    text-align: center;
+    padding: 0.77%;
+}
+#ContactUs{ 
+    border-bottom: solid #f5f5f5;
+    border-width: thin;
+    color: crimson;
+}
+.main{
+    
+    background-image: url('imagen4.jpg');
+    background-attachment: scroll;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 28.56em;
+    margin-bottom: 1,8125em;
+}
+.main div {
+    color: #fff;
+    float: left;
+    text-align: center;
+    width: 759px;
+}
+.main div h1{
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 400%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    line-height: 64px;
+    margin: 59px 0px 20px 300px;
+    width: 80%;
+}
+.main div p{
+    font-family: CaslonTwoTwentyFour-Book, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    margin-left: 300px;
+    width: 80%;
+}
+div .form{
+
+    padding-left: 15%;
+    margin-top: 20px;
+    width: 498px;
+    text-align: left;
+}
+div .form label{ 
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    font-family: FuturaPTBook-Reg, Arial, Helvetica, sans-serif;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    margin-bottom: 2px;
+    width: 100%;
+    
+}
+div .form input{
+    height: 35px;
+    font-family: FuturaPTBook-Reg, Arial, Helvetica, sans-serif;
+    margin-bottom: 2px;
+    width: 100%;
+    
+}
+div .form select{
+    display: block;
+    font-family: FuturaPTBook-Reg, Arial, Helvetica, sans-serif;
+    margin-bottom: 2px;
+    width: 100%;
+    height: 30px;
+}
+div .form textarea{
+    display: block;
+    font-family: FuturaPTBook-Reg, Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    width: 100%;
+}
+div .form input[type="submit"]{
+    float: right;
+    font-family: FuturaPTBook-Reg, Arial, Helvetica, sans-serif;
+   
+    width: 100%;
+    background-color:#fa5b3c;
+    color:#fff;
+    cursor: pointer;
+    height: 29px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    width: auto !important;
+    border:none
+ }
+ .numbers h2{
+    padding-top: 2%;
+    text-align: center;
+ }
+ div.numbers>div>div>h3{
+    font:51px/51px CaslonTwoTwentyFour-Book, Arial, Helvetica, sans-serif;
+    padding-left: 34.5%;
+    float: left;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    color: #181818;
+
+ }
+ .firstnumber{
+    width: 33.3%;
+    float: left;
+ }
+ .secondnumber{
+    width: 33.3%;
+    float: left;
+ }
+ .thirdnumber{
+    width:33.3%;
+    float: left;
+ }
+
+ div.numbers>div>div>h3::before{
+    margin-right: 23px;
+    border-bottom: 1px solid #000;
+    content: '';
+    display: inline-block;
+    height: 25px;
+    vertical-align: top;
+    width: 40px;
+}
+div.numbers>div>div>h3::after{
+    margin-left: 23px;
+    border-bottom: 1px solid#000;
+    content: '';
+    display: inline-block;
+    height: 25px;
+    vertical-align: top;
+    width: 40px;
+}
+h4{
+    color: #5a5a5a;
+    font-size: 2em;
+    font-weight: normal;
+    letter-spacing: 0.125em;
+    line-height: 1.2em;
+    margin-bottom: 11px;
+    clear: both;
+}
+h4#design{
+    margin-left: 37.5%;
+}
+h4#schedule{
+    margin-left: 31.5%;
+}
+h4#enjoy{
+    margin-left: 39%;
+}
+div>div>div>div>p{
+    color: #5a5a5a;
+    font-size:1.24em;
+    margin-top: 0%;
+    padding-top: 0%;
+    padding-bottom: 10%;
+    text-align: center;
+}
+.firstnumber p{
+    margin-left: 24%;
+    width: 65%;
+}
+.secondnumber p{
+    margin-left: 10%;
+    width: 75%;
+}
+.thirdnumber p {
+    margin-left: 18%;
+    width: 65%;
+}
+div>footer{
+    background-color: #ededed;
+    height: 19.6875em;
+    clear: both;
+}
+div>footer>img{
+    padding-top: 3%;
+    padding-right: 1%;
+}
+div>footer>img#first{
+
+    padding-left: 15%;
+    padding-top: 3%;
+    padding-right: 1%;
+}

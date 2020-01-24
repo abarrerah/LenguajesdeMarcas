@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    margin: auto;
+    width: 97%;
+    
+}
+.container header{
+    display: inline-block;
+    margin-bottom: 3%;
+}
+.container header div img{
+    
+    position: absolute;
+}
+#logo{
+    width: 15%;
+}
+.container header aside p{
+    
+    display: inline;
+    position: absolute;
+    margin-left: 70%;
+}
+.container header aside p img{
+    width: 10%;
+}
+.container header aside img{
+    width: 5%
+}
+.container nav{
+    background-color:
+    #ec008c;
+color:white;
+position: sticky;
+position: -webkit-sticky;
+width: 100%;
+top: 0px;
+z-index: 100;
+}
+.container nav ul {
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+.container nav ul li{
+    display: inline;
+    margin-left: 1%;
+    
+}
+.container nav li:hover{
+    background-color: white;
+    color: #ec008c;
+}
+.container nav ul li#first{
+    margin-left: 0%;
+}
+.container main div.derecha{
+    float:right;
+}
+.container main div.derecha img {
+    height: 550px;
+}
+.container main div.derecha h3{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.container main .banner img{
+    width: 67%;
+    height: 150px;
+}
+.container main .banner div#circulos{
+    text-align: center;
+    color: #ec008c;
+}
+.container main .banner div#leftpass, .container main .banner div#rightpass{
+    color: #ec008c;
+}
+.container main .banner div#leftpass{
+    float: left;
+}
+.container main .banner div#rightpass{
+    float:right;
+}
+.imagenes div{
+    border: 2px solid #ec008c ;
+    width: 33%;
+}
+.imagenes #uno,.imagenes #dos,.imagenes #tres{
+    border-radius: 10%;
+    float: left;
+    width: 17%;
+    height: 22%;
+    height: 250px;
+    margin-bottom: 2%;  
+    margin-right: 3%;
+    text-align: center;
+    font-size: 1.5em;
+}
+.imagenes #uno p,.imagenes #dos p,.imagenes #tres p {
+    margin-top: 0%;
+}
+.imagenes #uno{
+    margin-left: 3.5%;
+}
+.imagenes img{
+    margin-top: 10%;
+    width: 30%;
+}
+.container footer{
+    background-color:
+    #ec008c;
+    color: white;
+    padding-bottom: 0.13%;
+    padding-top: 0.13%;
+    text-align: center;
+    overflow: hidden;
+    clear: both;
+}

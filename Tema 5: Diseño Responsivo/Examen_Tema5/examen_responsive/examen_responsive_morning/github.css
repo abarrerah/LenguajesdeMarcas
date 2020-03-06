@@ -1,0 +1,244 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+   margin: 0%;
+}
+.container header{
+    width: 100%;
+    background-color: #000000;
+    padding-bottom: 15px;
+}
+.container header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.container header img{
+    width: 10%;
+    margin-top: 5%;
+    margin-left: 3%
+}
+.container header i{
+    display: inline-block;
+    margin-left: 75%;
+    background-color: #ffffff;
+}
+.container header nav{
+    visibility: hidden;
+}
+.container header nav ul li{
+    width: 0%;
+    height: 0px;
+}
+.container main{
+    background-color: #222222;
+}
+.container main section {
+    
+    text-align: center;
+    color: #ffffff;
+}
+.container main section h1{
+    margin-top: 0%;
+}
+.container main section p,.container section p{
+    margin-left: 7%;
+    margin-right: 7%;
+}
+.container main section form label,.container main section form input,.container main section form p{
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
+    padding: 0%;
+    border: 0%;
+}
+.container main section form button{ 
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 6.5%;
+    background-color:
+#008000;
+    border-color:
+    transparent;
+    color:
+#ffffff;
+    width: 40%;
+    align-content: center;
+    display: flex;
+    margin-left: 33%;
+    text-align: center;
+}
+.container main section form p{
+    text-shadow: transparent;
+    color: transparent;
+    text-decoration: none;
+}
+.container main section#sectionone{
+    padding-top: 5%;
+}
+.container main section#sectiontwo{
+    padding-bottom: 5%;
+}
+.container section{
+    text-align: center;
+}
+.container section h1{
+    margin-bottom: 5px;
+}
+.container section h3{
+    margin-top: 3px;
+}
+.container section p a{
+    border: 1px solid blue;
+    padding: 2%;
+    border-radius: 8%;
+}
+.container section div img{
+    width: 40%;
+}
+@media(max-width:576px){
+    .container main section form p{
+        font: 0/0 a;
+    }
+}
+@media (min-width:576px){
+    .container main{
+        padding-bottom: 5%;
+    }
+    .container main section form{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .container main section form label,.container main section form input,.container main section form p{
+        visibility: visible;
+        width: 90%;
+        height: 15px;
+    }
+    .container main section form label{
+        font-weight: bolder;
+        margin-bottom: 2%;
+        text-align: left;
+        font-size: larger;
+    }
+    .container main section form input{
+        margin-left: 2%;
+        margin-bottom: 3%;
+    }
+    .container section form label#user{
+        margin-top: 3%;
+    }
+    .container main section form label,.container main section form input{
+        height: 20px;
+        border-radius: 7%;
+        border-color: gray;
+        border-width: 1px;
+    }
+    .container main section form p{
+        color:black;
+    }
+    .container main section#sectiontwo{
+        background-color: #ffffff;
+        width: 90%;
+        margin:auto;
+        color: black;
+    }
+    .container main section form label, .container main section form input,.container main section form button{
+        display: block;
+        margin-left: 5%;
+        width: 90%;
+    }
+    .container main section form button{
+        padding-top: 2%;
+padding-bottom: 2%;
+border-radius: 6.5%;
+background-color:
+#008000;
+border-color:
+transparent;
+color:
+#ffffff;
+text-align: center;
+    }
+}
+@media (min-width:992px){
+    .container header{
+        height: 100px;
+        display: grid;
+        grid-template-columns: 10% 90%;
+    }
+    .container header img{
+        width: 30%;
+        margin-top: 1%;
+        grid-column: 1/2;
+    
+    }
+    .container header nav ul {
+        grid-column: 2/3;
+    }
+
+    .container header i{
+        visibility: hidden;
+        width: 0%;
+        height: 0px;
+    }
+    .container header nav{
+        visibility: visible;
+        grid-column: 2/3;
+    }
+    .container header nav ul{
+        display: flex;
+    }
+    .container header nav ul li{
+        width: 10%;
+        height: 20%;
+        color: white;
+        
+        
+    }
+    .container main{
+        padding-bottom: 5%;
+        display: grid;
+        grid-template-columns: repeat(10,auto);
+        padding-top: 2%;
+        grid-template-rows: repeat(10,auto);
+    }
+    .container main section#sectionone{
+        grid-column: 5/11;
+    }
+    .container main section#sectiontwo{
+        grid-column: 1/5;
+        grid-row: 1;
+    }
+    .container section p{
+        margin-bottom: 2%;
+        height: 20px;
+    }
+    .container section#sthree{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+    .container section div img{
+        width: 70%;
+    }
+    .container section#sthree div#sep{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+    .container section#sthree div#sep:nth-child(1){
+        grid-column: 1/3;
+    }
+    .container section#sthree div#sep div#third{
+        grid-column: 1/3;
+        text-align: center;
+    }
+    .container section#sthree div#sep div#third p{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}

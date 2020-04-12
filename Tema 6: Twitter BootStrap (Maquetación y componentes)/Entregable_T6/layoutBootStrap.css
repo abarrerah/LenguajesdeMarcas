@@ -1,0 +1,8 @@
+@media(max-width:576px){
+    h2#responsive{
+        font-size: 1.3rem;
+    }
+    p#responsive{
+        font-size: 1rem;
+    }
+}

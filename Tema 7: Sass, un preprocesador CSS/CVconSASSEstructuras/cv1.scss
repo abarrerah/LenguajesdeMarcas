@@ -1,0 +1,311 @@
+//Colores 
+$color-background:rgb(68, 65, 65);
+$container-color:rgb(247, 244, 244);
+$link-color:rgb(84, 84, 218);
+$font-color:rgb(105, 100, 100);
+$display-grid:grid;
+$grid-columns: 70% 30%;
+$color-list:red,green,blue,yellow,#CA3AC1,#54499E,#F1554C;
+$num:1;
+$color-background-dark-theme:#101c24;
+$font-color-dark-theme:#b9c2c9;
+$bg-color-dark-theme:#f7ae21;
+
+$dark-theme:false;
+
+//BreakPoints
+$breakpoints: (
+    'sm' :576px,
+    'md' :768px,
+    'lg' :992px
+);
+
+//Tamaños
+$width-container:80%;
+$margin:0% auto;
+$margin-container-child:3%;
+$font-size:0.8rem;
+//mixins
+@mixin text-p {
+    font: {
+        family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        size: 0.77rem;
+        weight: normal;
+    }
+    color: $font-color;
+}
+@mixin header {
+    font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+    size: 2rem;
+    font-weight:bolder;
+
+}
+@mixin breakpoint ($point){
+    @if $point == small {
+        @media (max-width:576px )  { 
+            @content; 
+        }
+    }@if $point == large{
+        @media (max-width:992px){
+            @content;
+        }
+    }
+}
+//funciones
+@function calcularAnchura($grid-columns){
+    $grid-columns:60% 40%;
+    @return $grid-columns;
+
+}
+
+@function newWidth(){
+    $new-Width:86%;
+    @return $new-Width;
+}
+//modificar tamaño de los h desde h1 hasta h6
+$listh:(h1,h2,h3,h4,h5,h6);
+@each $var in $listh {
+    .container -#{$var}{
+        font-size:17px;
+    }
+    
+}
+//anidamiento
+body{
+    background-color: $color-background;
+}
+.container{
+    background-color: $container-color;
+    width: $width-container;
+    margin: $margin;
+    border-radius: 1rem;
+    
+    @include breakpoint(large){
+        width: newWidthlg();
+    }
+    @if $dark-theme==true{
+        background-color: $color-background-dark-theme;
+        color: $font-color-dark-theme;
+    }
+    .header{
+        header{
+            margin-left: $margin-container-child;
+            padding-top: $margin-container-child/9;
+            margin-right: $margin-container-child;
+            @include header;
+            @include breakpoint(small){
+                font-size: 50%;
+            }
+            @include breakpoint(large){
+                font-size: 80%;
+            }
+            margin-bottom: 2%;
+        div{
+            display: flex;
+            width: $width-container;
+            flex-wrap: wrap;
+            @include breakpoint(small){
+              display: inline-block;
+              width: 100%;
+            }
+            p{
+                width: $width-container/2.5;
+                @include text-p;
+                padding-right: $margin-container-child/5;
+                padding-top: 0%;
+                padding-bottom: 0%;
+                margin-top: 0%;
+                margin-bottom: 0%;
+                @if $dark-theme==true {
+                    color: $font-color-dark-theme;
+                }
+                @include breakpoint(large){
+                    font-size: 90%;
+                }
+                a:hover{
+                color: $link-color;
+                color: $link-color;
+                @if $dark-theme==true{
+                    color:#e9571e;
+                }
+                }
+                a{
+                text-decoration: none;
+                font-weight: bold;
+                @if $dark-theme==true{
+                    color: $bg-color-dark-theme;
+                }
+                }
+                a:visited{
+                    color:$color-background;
+                    @if $dark-theme==true{
+                        color: #61b7c9;
+                    }
+                }
+            }
+    
+        }
+        img{
+            width: $width-container;
+            margin-top: $margin-container-child;
+            margin-right: $margin-container-child;
+            @include breakpoint(small){
+                width: 0%;
+                visibility: hidden;
+            }
+            @include breakpoint(large){
+                width: 0%;
+                visibility: hidden;
+            }
+        }
+        }
+    }
+    .body{
+        margin-left: $margin-container-child;
+        display: $display-grid;
+        grid-template-columns: $grid-columns;
+
+        @include breakpoint(small){
+            grid-template-columns: calcularAnchura($grid-columns);
+        }
+        width: 93%;
+        border-radius: 1rem;
+        background-color: rgb(212, 221, 221);
+        @if $dark-theme==true{
+            background-color: $bg-color-dark-theme;
+        }
+        div{
+                h2{
+                    margin-left: 1%;
+                    @if $dark-theme==true{
+                        color: $color-background;
+                    }
+                }
+            @include breakpoint(large){
+                h2{
+                    font-size: 130%;
+                }
+            }
+            @include breakpoint(small){
+                h2{
+                    font-size: 90%;
+                }
+            }
+            div{
+                margin-bottom: $margin-container-child;
+                h3,h4{
+                    margin: 0%;
+                    margin-left: 2%;
+                    @if $dark-theme==true {
+                        color:$color-background;
+                    }
+                    @include breakpoint(small){
+                        font-size: 90%;
+                    }
+                }
+                p::before{
+                    content: '-';
+                }
+                p{
+                   
+                    @include breakpoint(small){
+                        font-size: 75%;
+                    }
+                    @include text-p;
+                    margin: 0%;
+                    margin-top: 0.5%;
+                    margin-left:2%;
+                }
+            }
+        }div{
+            h5{
+                @if $dark-theme==true {
+                    color:$color-background;
+                }
+                @include breakpoint(small){
+                    font-weight: bold;
+                    color: $font-color;
+                }
+            }
+        }
+    }
+    .footer{
+        margin-left: $margin-container-child;
+        footer{
+            display: $display-grid;
+            grid-template-columns: $grid-columns;
+            
+            @include breakpoint(small){
+                grid-template-columns: calcularAnchura($grid-columns);
+            }
+            
+            div{
+                div{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 5%;
+                    p{
+                        @include text-p;
+                        width: 50%;
+                        margin: 0%;
+                    }
+                }
+                
+            }div#second{
+                h3,p{
+                    @if $dark-theme==true {
+                        color: $font-color-dark-theme;
+                    }
+                }
+                @include breakpoint(small){
+                    grid-column:1/2;
+                    h3,p{
+                        font-size: 90%;
+                    }
+                }
+                
+                
+                p{
+                @include text-p;
+                
+            }
+        }
+        div#first{
+                h3,p{
+                    @if $dark-theme==true {
+                        color: $font-color-dark-theme;
+                    }
+                
+                }
+            @include breakpoint(small){
+                h3,p{
+                    font-size: 90%;
+                    
+                }
+            }
+        }
+    }
+    h1{
+        text-align: center;
+    }
+    table{
+        text-align: center;
+        margin-left: auto;
+        margin-right:auto;
+       
+        @while $num < 8 {
+         tr:nth-child(#{$num}) {
+           background-color: nth($color-list, $num);
+           color: black;
+         }
+         $num: $num + 1;
+        tr{
+         
+         td{
+             border: black 1px solid;
+         }
+}
+}
+}
+}
+}

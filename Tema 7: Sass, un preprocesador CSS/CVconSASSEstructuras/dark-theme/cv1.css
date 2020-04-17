@@ -1,0 +1,362 @@
+.container -h1 {
+  font-size: 17px;
+}
+
+.container -h2 {
+  font-size: 17px;
+}
+
+.container -h3 {
+  font-size: 17px;
+}
+
+.container -h4 {
+  font-size: 17px;
+}
+
+.container -h5 {
+  font-size: 17px;
+}
+
+.container -h6 {
+  font-size: 17px;
+}
+
+body {
+  background-color: #444141;
+}
+
+.container {
+  background-color: #f7f4f4;
+  width: 80%;
+  margin: 0% auto;
+  border-radius: 1rem;
+  background-color: #101c24;
+  color: #b9c2c9;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: newWidthlg();
+  }
+}
+
+.container .header header {
+  margin-left: 3%;
+  padding-top: 0.33333%;
+  margin-right: 3%;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 2%;
+}
+
+@media (max-width: 576px) {
+  .container .header header {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container .header header {
+    font-size: 80%;
+  }
+}
+
+.container .header header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  .container .header header div {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.container .header header div p {
+  width: 32%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.77rem;
+  font-weight: normal;
+  color: #696464;
+  padding-right: 0.6%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: #b9c2c9;
+}
+
+@media (max-width: 992px) {
+  .container .header header div p {
+    font-size: 90%;
+  }
+}
+
+.container .header header div p a:hover {
+  color: #5454da;
+  color: #5454da;
+  color: #e9571e;
+}
+
+.container .header header div p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #f7ae21;
+}
+
+.container .header header div p a:visited {
+  color: #444141;
+  color: #61b7c9;
+}
+
+.container .header header img {
+  width: 80%;
+  margin-top: 3%;
+  margin-right: 3%;
+}
+
+@media (max-width: 576px) {
+  .container .header header img {
+    width: 0%;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 992px) {
+  .container .header header img {
+    width: 0%;
+    visibility: hidden;
+  }
+}
+
+.container .body {
+  margin-left: 3%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  width: 93%;
+  border-radius: 1rem;
+  background-color: #d4dddd;
+  background-color: #f7ae21;
+}
+
+@media (max-width: 576px) {
+  .container .body {
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+  }
+}
+
+.container .body div h2 {
+  margin-left: 1%;
+  color: #444141;
+}
+
+@media (max-width: 992px) {
+  .container .body div h2 {
+    font-size: 130%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container .body div h2 {
+    font-size: 90%;
+  }
+}
+
+.container .body div div {
+  margin-bottom: 3%;
+}
+
+.container .body div div h3, .container .body div div h4 {
+  margin: 0%;
+  margin-left: 2%;
+  color: #444141;
+}
+
+@media (max-width: 576px) {
+  .container .body div div h3, .container .body div div h4 {
+    font-size: 90%;
+  }
+}
+
+.container .body div div p::before {
+  content: '-';
+}
+
+.container .body div div p {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.77rem;
+  font-weight: normal;
+  color: #696464;
+  margin: 0%;
+  margin-top: 0.5%;
+  margin-left: 2%;
+}
+
+@media (max-width: 576px) {
+  .container .body div div p {
+    font-size: 75%;
+  }
+}
+
+.container .body div h5 {
+  color: #444141;
+}
+
+@media (max-width: 576px) {
+  .container .body div h5 {
+    font-weight: bold;
+    color: #696464;
+  }
+}
+
+.container .footer {
+  margin-left: 3%;
+}
+
+.container .footer footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+}
+
+@media (max-width: 576px) {
+  .container .footer footer {
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+  }
+}
+
+.container .footer footer div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 5%;
+}
+
+.container .footer footer div div p {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.77rem;
+  font-weight: normal;
+  color: #696464;
+  width: 50%;
+  margin: 0%;
+}
+
+.container .footer footer div#second h3, .container .footer footer div#second p {
+  color: #b9c2c9;
+}
+
+@media (max-width: 576px) {
+  .container .footer footer div#second {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .container .footer footer div#second h3, .container .footer footer div#second p {
+    font-size: 90%;
+  }
+}
+
+.container .footer footer div#second p {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.77rem;
+  font-weight: normal;
+  color: #696464;
+}
+
+.container .footer footer div#first h3, .container .footer footer div#first p {
+  color: #b9c2c9;
+}
+
+@media (max-width: 576px) {
+  .container .footer footer div#first h3, .container .footer footer div#first p {
+    font-size: 90%;
+  }
+}
+
+.container .footer h1 {
+  text-align: center;
+}
+
+.container .footer table {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .footer table tr:nth-child(1) {
+  background-color: red;
+  color: black;
+}
+
+.container .footer table tr td {
+  border: black 1px solid;
+}
+
+.container .footer table tr:nth-child(2) {
+  background-color: green;
+  color: black;
+}
+
+.container .footer table tr td {
+  border: black 1px solid;
+}
+
+.container .footer table tr:nth-child(3) {
+  background-color: blue;
+  color: black;
+}
+
+.container .footer table tr td {
+  border: black 1px solid;
+}
+
+.container .footer table tr:nth-child(4) {
+  background-color: yellow;
+  color: black;
+}
+
+.container .footer table tr td {
+  border: black 1px solid;
+}
+
+.container .footer table tr:nth-child(5) {
+  background-color: #CA3AC1;
+  color: black;
+}
+
+.container .footer table tr td {
+  border: black 1px solid;
+}
+
+.container .footer table tr:nth-child(6) {
+  background-color: #54499E;
+  color: black;
+}
+
+.container .footer table tr td {
+  border: black 1px solid;
+}
+
+.container .footer table tr:nth-child(7) {
+  background-color: #F1554C;
+  color: black;
+}
+
+.container .footer table tr td {
+  border: black 1px solid;
+}
+/*# sourceMappingURL=cv1.css.map */

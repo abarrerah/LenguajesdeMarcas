@@ -1,0 +1,5 @@
+//funciones
+@function calcularAnchura() {
+    $newWidth:90%;
+    @return $newWidth;
+  }

@@ -1,0 +1,32 @@
+//mixins
+@mixin text-p {
+    font: {
+      family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      size: 0.77rem;
+      weight: normal;
+    }
+    color: $font-color;
+  }
+  @mixin breakpoint($point) {
+    @if $point == small {
+      @media (max-width: 576px) {
+        @content;
+      }
+    }
+    @if $point == large {
+      @media (max-width: 992px) {
+        @content;
+      }
+    }
+    @if $point == xl {
+      @media (max-width: 1920px) {
+        @content;
+      }
+    }
+  }
+  @mixin centrarPadre {
+    margin: 0px auto;
+  }
+  @mixin centrarLineado {
+    line-height: 100px;
+  }

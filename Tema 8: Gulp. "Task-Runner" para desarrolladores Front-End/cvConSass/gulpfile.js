@@ -1,38 +1,21 @@
-const{watch,series,parallel,src,dest}=require("gulp");
-const sassdoc = require("sassdoc");
 
-function inicio(cb){
-    console.log("Generando proyecto CV");
+
+const{ watch,series,parallel,src,dest}=require("gulp");
+
+function inicial(cb){
+    console.log("generando proyecto CV");
     cb();
 }
 
 function final(cb){
-    console.log("Proyecto CV generado");
+    console.log("Proyecto CV finalizado");
     cb();
 }
 
-function pipeline(){
-    return src("cv1.html").pipe(dest("dist/"),src("cv2.css").pipe(dest("dist/")));
-}
+exports.inicial=inicial;
+exports.final=final;
 
-function documentar(){
-    return src("./scss/*.scss").pipe(sassdoc());
-}
+exports.pipeline=function() {
+    return src("css/*").pipe(dest("dist/"))
+};
 
-function generar(){
-    return gulp.src('./scss/cv.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/'));
-}
-
-function copyImage(){
-    return src("./img/*").pipe(dest('dist/img/'));
-}
-
-exports.inicio = inicio;
-exports.final = final;
-exports.default = parallel(documentar,generar,copyImage);
-exports.documentar = documentar;
-exports.generar = generar;
-exports.copyImage = copyImage;
-exports.pipeline=pipeline;

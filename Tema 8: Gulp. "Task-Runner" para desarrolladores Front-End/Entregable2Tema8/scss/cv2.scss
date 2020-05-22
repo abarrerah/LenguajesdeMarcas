@@ -1,0 +1,297 @@
+//Colores
+$color-background: rgb(68, 65, 65);
+$container-color: rgb(247, 244, 244);
+$link-color: rgb(84, 84, 218);
+$font-color: rgb(105, 100, 100);
+$display-grid: grid;
+$grid-columns: 70% 30%;
+$color-list: red, green, blue, yellow, #ca3ac1, #54499e, #f1554c;
+$num: 1;
+$color-background-dark-theme: #101c24;
+$font-color-dark-theme: #b9c2c9;
+$bg-color-dark-theme: #f7ae21;
+
+$dark-theme:false;
+
+//BreakPoints
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+);
+
+//Tamaños
+$width-container: 85%;
+$margin: 0% auto;
+$margin-container-child: 3%;
+$font-size: 0.8rem;
+//mixins
+@mixin text-p {
+  font: {
+    family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    size: 0.77rem;
+    weight: normal;
+  }
+  color: $font-color;
+}
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $point == large {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $point == xl {
+    @media (max-width: 1920px) {
+      @content;
+    }
+  }
+}
+@mixin centrarPadre {
+  margin: 0px auto;
+}
+@mixin centrarLineado {
+  line-height: 100px;
+}
+//funciones
+@function calcularAnchura() {
+  $newWidth:90%;
+  @return $newWidth;
+}
+
+
+//modificar tamaño de los h desde h1 hasta h6
+$base:1rem;
+@for $i from 1 through 6{
+  h#{$i}{
+    font-size: #{(0.4*(6-$i))}rem;
+  }
+  @include breakpoint(small){
+    h#{$i}{
+      font-size: #{(0.15*(6-$i))}rem;
+    }
+  }
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  body {
+    font-family: montserrat;
+    background-color: $color-background;
+    
+    .container {
+      width: $width-container;
+      background-color: $container-color;
+      @include centrarPadre();
+      @if $dark-theme==true{
+        background-color:$color-background-dark-theme ;
+      }
+      header {
+        nav {
+          background: rgb(2, 0, 36);
+          background: linear-gradient(
+            299deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(90, 90, 204, 1) 46%,
+            rgba(0, 212, 255, 1) 100%
+          );
+          height: 100px;
+          width: 84%;
+          position: fixed;
+          top: 0;
+          @include centrarPadre();
+          @if $dark-theme== true{
+            background: rgb(201,111,35);
+            background: linear-gradient(315deg, rgba(201,111,35,1) 23%, rgba(247,174,33,1) 76%);
+          }
+          @include breakpoint(xl) {
+            width: 84.4%;
+          }
+          label.logo {
+            color: white;
+            font-size: 30px;
+            @include centrarLineado();
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 100px;
+            padding-right: 30px;
+            width: 35%;
+            font-weight: bold;
+            @include breakpoint(small){
+              visibility: hidden;
+            }
+            @include breakpoint(large) {
+              font-size: 30px;
+              padding-left: 50px;
+            }
+          }
+          ul {
+            float: right;
+            margin-right: 20px;
+            @include breakpoint(large) {
+              position: fixed;
+              width: 85%;
+              height: 100vh;
+              margin-left: 7.5%;
+              margin-right: 7.5%;
+              background: #2c3e50;
+              top: 80px;
+              left: -100%;
+              text-align: center;
+              transition: all 0.5s;
+            }
+            li {
+              display: inline-block;
+              line-height: 80px;
+              margin: 0 5px;
+              @include breakpoint(large) {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+              }
+              a.active,
+              a:hover {
+                background: #1b9bff;
+                transition: 0.5s;
+                border-radius: 0.6rem;
+                @include breakpoint(large) {
+                  background: none;
+                  color: #0082e6;
+                }
+                @if $dark-theme==true{
+                  background: $bg-color-dark-theme;
+
+                }
+              }
+              a {
+                color: white;
+                padding: 5px;
+                @include breakpoint(large) {
+                  font-size: 13px;
+                }
+              }
+              a:link {
+                text-decoration: none;
+              }
+            }
+          }
+          .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+            @include breakpoint(large) {
+              display: block;
+            }
+          }
+          #check {
+            display: none;
+          }
+          #check:checked ~ ul {
+            @include breakpoint(large) {
+              left: 0;
+            }
+          }
+        }
+        div.info {
+          width: $width-container;
+          @include centrarPadre();
+          h1 {
+            margin-top: 100px;
+            @if $dark-theme==true {
+              color: $font-color-dark-theme;
+            }
+          }
+          div {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 2%;
+            justify-content: space-between;
+            p {
+              @include text-p;
+              @if $dark-theme==true {
+                color:$font-color-dark-theme;
+              }
+              a {
+                text-decoration: none;
+                font-weight: bold;
+                color: cornflowerblue;
+                @if $dark-theme==true {
+                  color: $bg-color-dark-theme;
+                }
+              }
+              a:hover {
+                color: $link-color;
+              }
+              a:visited {
+                color: #c96f23;
+              }
+            }
+          }
+        }
+      }
+      main {
+        width: $width-container;
+        @include centrarPadre();
+        display: grid;
+        grid-template-columns: $grid-columns;
+        background-color: #7aa6c7;
+        border-radius: 0.6rem;
+        @if $dark-theme==true{
+          background-color: $bg-color-dark-theme;
+        }
+        div.one {
+          margin-left: 0.7%;
+        }
+      }
+      footer {
+        width: $width-container;
+        margin: auto;
+        display: grid;
+        grid-template-columns: $grid-columns;
+        h3{
+          @if $dark-theme==true{
+            color:$font-color-dark-theme;
+          }
+        }
+        p {
+          @include text-p;
+          @if $dark-theme==true{
+            color:$font-color-dark-theme;
+          }
+        }
+        section {
+          text-align: center;
+          @include breakpoint(small){
+            width: calcularAnchura;
+            margin-left: 5%;
+          }
+          h1{
+            @if $dark-theme==true{
+              color:$font-color-dark-theme;
+            }
+          }
+          table {
+            @include centrarPadre();
+            
+            
+            @while $num < 8 {
+              tr:nth-child(#{$num}) {
+                background-color: nth($color-list, $num);
+                color: black;
+              }
+              $num: $num + 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
